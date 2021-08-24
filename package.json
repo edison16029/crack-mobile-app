@@ -5,9 +5,11 @@
   "scripts": {
     "android": "react-native run-android",
     "ios": "react-native run-ios",
-    "start": "react-native start",
-    "test": "jest",
-    "lint": "eslint ."
+    "start": "react-native start --reset-cache",
+    "test": "jest --coverage --coverageDirectory=output/coverage/jest",
+    "lint": "eslint .",
+    "checkstyle": "eslint --fix src",
+    "checktype": "tsc --build tsconfig.json"
   },
   "dependencies": {
     "react": "17.0.1",
