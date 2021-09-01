@@ -1,18 +1,16 @@
 import { StyleSheet } from 'react-native';
+import { padding } from '../../common/utils/constants';
+import { scaleResponsively } from '../../common/utils/scaling';
 
 export default StyleSheet.create({
     app_bar_container : {
         flexDirection : 'row-reverse',
         alignItems : 'flex-start',
-        // padding : padding.sm,
-        padding: 10,
+        padding : scaleResponsively(padding.sm),
         width : "100%",
-        backgroundColor: 'pink'
     },
     app_bar_icons : {
-        // paddingVertical : padding.sm,
-        // paddingRight : padding.sm
-        paddingVertical :  10,
-        paddingRight :  10
+        paddingVertical : scaleResponsively(padding.sm),
+        paddingRight : scaleResponsively(padding.sm)
     },
 })

@@ -10,14 +10,14 @@ const AppBarComponent = (props) => {
             <Icon
                 name={"cog"}
                 size={45}
-                color={'red'}
+                color={'black'}
                 style={styles.app_bar_icons}
                 onPress={() => { console.log("Cog is pressed"); }}
             />
             <Icon
                 name={"cog"}
                 size={45}
-                color={'red'}
+                color={'white'}
                 style={styles.app_bar_icons}
                 onPress={() => { console.log("Cog is pressed"); }}
             />
