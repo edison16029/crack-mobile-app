@@ -1,8 +1,10 @@
 import * as React from 'react';
-import { Text, View, Switch, TouchableOpacity } from 'react-native';
+import { Text, View, Switch } from 'react-native';
 
 import ColorPanel from './ColorPanel.view';
+import Icon from '../../common/Icon/Icon.view';
 import styles from './Settings.styles';
+import { scaleResponsively } from '../../common/utils/scaling';
 
 const SettingsView = (props) => {
     const {
@@ -11,7 +13,8 @@ const SettingsView = (props) => {
         color,
         toggleSound,
         toggleVibrate,
-        onChooseColor
+        onChooseColor,
+        onClosePress
     } = props;
 
     const switchColors = {
@@ -22,18 +25,17 @@ const SettingsView = (props) => {
     return (
         <View style={styles.containerStyle}>
             <View style={styles.closeButtonContainerStyle}>
-                <TouchableOpacity>
-                    {/* <Icon color={theme.colors.accent} name="times-circle" 
-                        type="font-awesome" size={closeButtonSize}
-                        onPress = {props.onClosePress}
-                    /> */}
-                </TouchableOpacity>
-
+                <Icon
+                    name={"close"}
+                    size={scaleResponsively(32)}
+                    color={color.accent}
+                    onPress={onClosePress}
+                />
             </View>
 
             <View style={styles.rowContainerStyle}>
-                <View style={{...styles.rowStyle, borderColor: color.accent}}>
-                    <Text style={{...styles.textStyle, color: color.accent}}>{"Sound"}</Text>
+                <View style={{ ...styles.rowStyle, borderColor: color.accent }}>
+                    <Text style={{ ...styles.textStyle, color: color.accent }}>{"Sound"}</Text>
                     <Switch
                         trackColor={{ true: switchColors.true, false: switchColors.false }}
                         thumbColor={switchColors.thumbColor}
@@ -43,8 +45,8 @@ const SettingsView = (props) => {
             </View>
 
             <View style={styles.rowContainerStyle}>
-                <View style={{...styles.rowStyle, borderColor: color.accent}}>
-                    <Text style={{...styles.textStyle, color: color.accent}}>{"Vibrate"}</Text>
+                <View style={{ ...styles.rowStyle, borderColor: color.accent }}>
+                    <Text style={{ ...styles.textStyle, color: color.accent }}>{"Vibrate"}</Text>
                     <Switch
                         trackColor={{ true: switchColors.true, false: switchColors.false }}
                         thumbColor={switchColors.thumbColor}
@@ -54,9 +56,9 @@ const SettingsView = (props) => {
             </View>
 
             <View style={styles.rowContainerStyle}>
-                <View style={{...styles.rowStyle, borderColor: color.accent}}>
-                    <Text style={{...styles.textStyle, color: color.accent}}>{"Theme"}</Text>
-                    <ColorPanel onChooseColor={onChooseColor} />
+                <View style={{ ...styles.rowStyle, borderColor: color.accent }}>
+                    <Text style={{ ...styles.textStyle, color: color.accent }}>{"Theme"}</Text>
+                    <ColorPanel onChooseColor={onChooseColor} currentColorName={color.name} />
                 </View>
             </View>
         </View>

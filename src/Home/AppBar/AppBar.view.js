@@ -3,26 +3,30 @@ import { View } from 'react-native';
 
 import Icon from '../../common/Icon/Icon.view';
 import styles from './AppBar.styles';
+import { scaleResponsively } from '../../common/utils/scaling';
 
-const AppBarComponent = (props) => {
+const AppBar = (props) => {
+    const {
+        color,
+        toggleShowSettings
+    } = props;
     return (
         <View style={styles.app_bar_container}>
             <Icon
                 name={"cog"}
-                size={45}
-                color={'black'}
+                size={scaleResponsively(32)}
+                color={color.accent}
                 style={styles.app_bar_icons}
-                onPress={() => { console.log("Cog is pressed"); }}
+                onPress={toggleShowSettings}
             />
             <Icon
-                name={"cog"}
-                size={45}
-                color={'white'}
+                name={"question_mark"}
+                size={scaleResponsively(32)}
+                color={color.accent}
                 style={styles.app_bar_icons}
-                onPress={() => { console.log("Cog is pressed"); }}
             />
         </View>
     )
 }
 
-export default AppBarComponent;
+export default AppBar;

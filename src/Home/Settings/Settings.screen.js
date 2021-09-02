@@ -8,7 +8,7 @@ import {
     setColor as setColorAction
 } from '../Settings/Settings.slice';
 
-const SettingsScreen = props => {
+const SettingsScreen = ({ toggleShowSettings }) => {
     const dispatch = useDispatch();
     const soundValue = useSelector(state => state.settings.isSoundEnabled);
     const vibrateValue = useSelector(state => state.settings.isVibrateEnabled);
@@ -33,6 +33,7 @@ const SettingsScreen = props => {
             toggleSound={toggleSound}
             toggleVibrate={toggleVibrate}
             onChooseColor={onChooseColor}
+            onClosePress={toggleShowSettings}
         />
     )
 }
