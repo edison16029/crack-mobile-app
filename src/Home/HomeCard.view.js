@@ -20,11 +20,11 @@ const HomeCardView = (props) => {
                     <SettingsScreen
                         toggleShowSettings={toggleShowSettings} />
                 ) : (
-<Icon
-                            name={"logo"}
-                            size={scaleResponsively(300)}
-                            color={color.accent}
-                        />
+                    <Icon
+                        name={"logo"}
+                        size={scaleResponsively(300)}
+                        color={color.accent}
+                    />
 
                 )
             }

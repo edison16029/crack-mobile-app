@@ -10,6 +10,7 @@ const HomeScreen = ({ navigation }) => {
     isShowSettings,
     toggleShowSettings
   } = useHome();
+  
   return (
     <HomeView
       color={color}

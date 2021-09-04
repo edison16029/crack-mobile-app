@@ -24,6 +24,7 @@ const AppBar = (props) => {
                 size={scaleResponsively(32)}
                 color={color.accent}
                 style={styles.app_bar_icons}
+                onPress={() => {}}
             />
         </View>
     )

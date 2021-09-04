@@ -6,6 +6,7 @@ export const dimensions = {
 }
 
 export const defaultColors = {
+    name: 'Dark',
     primary: '#52575C',
     primaryDark: '#353535',
     accent: '#FFFFFF',
