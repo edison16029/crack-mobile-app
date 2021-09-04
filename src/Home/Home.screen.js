@@ -1,18 +1,23 @@
-import * as React from 'react';
-import {View, Text, TouchableOpacity} from 'react-native';
+import React from 'react';
+import { useSelector } from 'react-redux';
 
-const HomeScreen = ({navigation}) => {
+import HomeView from './Home.view';
+import { useHome } from './useHome';
+
+const HomeScreen = ({ navigation }) => {
+  const color = useSelector((state) => state.settings.color);
+  const {
+    isShowSettings,
+    toggleShowSettings
+  } = useHome();
+  
   return (
-    <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
-      <TouchableOpacity
-        style={{backgroundColor: 'red', height: '50%'}}
-        onPress={() => {
-          navigation.navigate('SinglePlayerGame');
-        }}>
-        <Text>This is a placeholder for Home Screen</Text>
-      </TouchableOpacity>
-    </View>
-  );
+    <HomeView
+      color={color}
+      isShowSettings={isShowSettings}
+      toggleShowSettings={toggleShowSettings}
+    />
+  )
 };
 
 export default HomeScreen;
