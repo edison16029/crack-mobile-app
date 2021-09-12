@@ -22,5 +22,13 @@ export default StyleSheet.create({
         paddingVertical : scaleResponsively(padding.lg),
         paddingHorizontal : scaleResponsively(padding.lg),
         elevation : scaleResponsively(10)
+    },
+    //Button styles
+    buttonContainer: {
+        alignSelf: 'center',
+        alignContent: 'center',
+        marginTop : scaleResponsively(50),
+        width : scaleResponsively(125),
+        height : scaleResponsively(75),
     }
 })
