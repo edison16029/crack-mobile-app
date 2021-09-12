@@ -1,10 +1,16 @@
-import * as React from 'react';
-import {View, Text} from 'react-native';
+import React from 'react';
+import { useSelector } from 'react-redux';
 
-export default function DetailsScreen() {
+import SinglePlayerGameView from './SinglePlayerGame.view';
+// import { useHome } from './useHome';
+
+const SinglePlayerGameScreen = ({ navigation }) => {
+  const color = useSelector((state) => state.settings.color);
+
   return (
-    <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
-      <Text>This is placeholder for Game Screen</Text>
-    </View>
-  );
-}
+    <SinglePlayerGameView 
+      color={color} />
+  )
+};
+
+export default SinglePlayerGameScreen;
