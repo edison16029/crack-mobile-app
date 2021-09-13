@@ -7,8 +7,7 @@ import { scaleResponsively } from '../../common/utils/scaling';
 
 const AppBar = (props) => {
     const {
-        color,
-        toggleShowSettings
+        color
     } = props;
     return (
         <View style={{...styles.app_bar_container, backgroundColor: color.primary}}>
@@ -17,7 +16,7 @@ const AppBar = (props) => {
                 size={scaleResponsively(32)}
                 color={color.accent}
                 style={styles.app_bar_icons}
-                onPress={toggleShowSettings}
+                onPress={() => {}}
             />
             <View style={styles.right_top_container}>
                 <Icon
