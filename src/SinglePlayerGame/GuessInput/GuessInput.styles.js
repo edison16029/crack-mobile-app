@@ -5,7 +5,6 @@ import { scaleResponsively } from '../../common/utils/scaling';
 export default StyleSheet.create({
     container: {
         height: '100%',
-        backgroundColor: 'red'
     },  
     rowContainer : {
         flex : 1,

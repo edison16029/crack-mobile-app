@@ -1,31 +1,34 @@
 import { StyleSheet } from 'react-native';
-import { fonts, padding, borderRadius, margin } from '../../common/utils/constants';
+import { fonts, padding, borderRadius } from '../../common/utils/constants';
 import { scaleResponsively } from '../../common/utils/scaling';
 
 export default StyleSheet.create({
-    cardContainer : {
-        height: '100%',
-        flex : 2,
+    container : {
+        flex : 4,
+    },
+    guessRow : {
+        flex : 1,
         flexDirection : 'row',
-        justifyContent : 'center',
+        justifyContent : 'space-between',
         alignItems : 'center',
-        marginTop : padding.md,
-        marginHorizontal : padding.xl,
+        marginVertical : padding.xs,
+        marginHorizontal : padding.sm,
         borderRadius : borderRadius.radiusLg,
-        elevation : 5,    
+        elevation : 5,
     },
     font : {
-        fontSize : fonts.lg,
         flex : 1,
-        textAlign : 'right',
-        marginRight : margin.lg,
+        textAlign : 'left',
+        marginLeft : padding.lg,
+        fontSize : fonts.md,
         textTransform : 'uppercase'
     },
 
     outerResultContainer: {
         flex : 1,
         alignItems : 'flex-start',
-        justifyContent : 'space-around'
+        justifyContent : 'space-around',
+        flexDirection: 'row'
     },
     resultContainer : {
         flexDirection : 'row',
