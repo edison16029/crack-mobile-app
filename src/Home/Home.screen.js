@@ -11,11 +11,16 @@ const HomeScreen = ({ navigation }) => {
     toggleShowSettings
   } = useHome();
   
+  const onPlayPress = () => {
+    navigation.navigate('SinglePlayerGame');
+  }
+  
   return (
     <HomeView
       color={color}
       isShowSettings={isShowSettings}
       toggleShowSettings={toggleShowSettings}
+      onPlayPress={onPlayPress}
     />
   )
 };

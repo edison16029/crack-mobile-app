@@ -3,6 +3,7 @@ import Close from '../../../assets/icons/Close.svg';
 import Tick from '../../../assets/icons/Tick.svg';
 import Logo from '../../../assets/icons/Logo.svg';
 import QuestionMark from '../../../assets/icons/QuestionMark.svg';
+import Flag from '../../../assets/icons/Flag.svg';
 
 const getIconComponent = (name) => {
     const appIcons = {
@@ -10,7 +11,8 @@ const getIconComponent = (name) => {
         'close': Close,
         'tick': Tick,
         'logo': Logo,
-        'question_mark': QuestionMark
+        'question_mark': QuestionMark,
+        'flag': Flag
     }
     return appIcons[name];
 }

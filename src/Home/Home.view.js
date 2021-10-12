@@ -3,6 +3,7 @@ import { View } from 'react-native'
 
 import AppBar from './AppBar/AppBar.view';
 import HomeCardView from './HomeCard.view';
+import Button from '../common/Button/Button.view';
 
 import styles from './Home.styles';
 
@@ -10,7 +11,8 @@ const HomeView = (props) => {
     const {
         color,
         isShowSettings,
-        toggleShowSettings
+        toggleShowSettings,
+        onPlayPress
     } = props;
     return (
         <View style={{ ...styles.container, backgroundColor: color.primary }}>
@@ -19,6 +21,10 @@ const HomeView = (props) => {
                 color={color}
                 isShowSettings={isShowSettings}
                 toggleShowSettings={toggleShowSettings} />
+            <Button
+                containerStyle={styles.buttonContainer}
+                color={color}
+                onButtonPress={onPlayPress} />
         </View>
     )
 }
