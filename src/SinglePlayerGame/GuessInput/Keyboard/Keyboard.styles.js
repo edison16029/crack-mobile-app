@@ -31,17 +31,10 @@ export default StyleSheet.create({
         fontFamily : fonts.primary
     },
     backspace_button_container : {
-        backgroundColor : defaultColors.primaryDark,
-        borderRadius : scaleResponsively(18),
-        borderWidth : scaleResponsively(0.5),
         alignItems : 'center',
         justifyContent : 'center',
-        width : ((dimensions.fullWidth-(2* padding.md)) * 0.13),
         height : "85%",
-        marginBottom : scaleResponsively(margin.sm),
-        // paddingHorizontal : padding.sm * 0.5,
         marginHorizontal : scaleResponsively(margin.sm * 0.5),
-        elevation : scaleResponsively(4)
     },
     backspace_button : {
         paddingVertical : scaleResponsively(padding.md * 0.8),

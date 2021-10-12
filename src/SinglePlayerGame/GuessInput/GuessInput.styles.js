@@ -32,5 +32,14 @@ export default StyleSheet.create({
         borderRadius : scaleResponsively(22),
         borderWidth : scaleResponsively(1.5),
         elevation : scaleResponsively(5),
+    },
+    uparrowContainer: {
+        width : scaleResponsively(50),
+        height : scaleResponsively(50),
+        borderRadius : 50,
+        justifyContent : 'center',
+        alignItems : 'center',
+        elevation : scaleResponsively(5),
+        borderWidth: scaleResponsively(1)
     }
 })

@@ -40,7 +40,7 @@ const dummyGuessList = [
         bulls: 3
     },
 ]
-const HomeView = (props) => {
+const SinglePlayerGameView = (props) => {
     const {
         color,
     } = props;
@@ -62,4 +62,4 @@ const HomeView = (props) => {
     )
 }
 
-export default HomeView;
+export default SinglePlayerGameView;

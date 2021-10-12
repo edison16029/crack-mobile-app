@@ -15,7 +15,7 @@ const GuessResult = (props) => {
             <View style={styles.outerResultContainer}>
                 <View style={styles.resultContainer}>
                     <Icon
-                        name={"close"}
+                        name={"crosshair"}
                         size={scaleResponsively(32)}
                         color={color.accent}
                     />
@@ -23,7 +23,7 @@ const GuessResult = (props) => {
                 </View>
                 <View style={styles.resultContainer}>
                     <Icon
-                        name={"close"}
+                        name={"bullseye"}
                         size={scaleResponsively(32)}
                         color={color.accent}
                     />
